@@ -1,0 +1,91 @@
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+    }
+    
+     :root {
+        --bg-color: #3B3A4A;
+        --box-color: rgba(21, 21, 24, 50%);
+        --btn-color: #37DBFF;
+        --font-color: #151518;
+    }
+    
+    body {
+        font-family: 'Ubuntu', sans-serif;
+        background-color: var(--bg-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+    }
+    
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid white;
+        width: 400px;
+        height: 530px;
+        background-color: var(--box-color);
+        border-radius: 12px;
+        border: 0;
+    }
+    
+    .image-container {
+        margin: 0 auto;
+        margin-top: 30px;
+        width: 400px;
+        height: 400px;
+        display: flex;
+    }
+    
+    .meme {
+        width: 100%;
+        max-height: 400px;
+        border-radius: 2px;
+        margin: 0 auto;
+    }
+    
+    #generator-btn {
+        font-family: inherit;
+        letter-spacing: 0.1em;
+        background-color: var(--btn-color);
+        color: var(--font-color);
+        font-size: 1.2rem;
+        margin: 30px auto;
+        padding: 10px 40px;
+        border: 0;
+        border-radius: 20px;
+        outline: none;
+    }
+    
+    #generator-btn:hover {
+        cursor: pointer;
+        transition: 0.2s ease;
+    }
+    
+    #generator-btn:active {
+        transform: translateY(4px);
+    }
+    /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+    /* Portrait and Landscape */
+    
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+        * {
+            overflow: hidden;
+        }
+        .image-container {
+            width: 400px;
+            height: 400px;
+            padding: 20px;
+        }
+        .meme {
+            width: auto;
+            max-height: auto;
+        }
+    }
